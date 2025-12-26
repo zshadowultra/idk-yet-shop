@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary: #ff3f6c; /* Vibrant Pink/Red */
+  --primary-dark: #d6335b;
+  --secondary: #282c3f; /* Deep Grey/Blue */
+  
+  /* UI Colors */
+  --background: #f5f6f8;
+  --surface: #ffffff;
+  --muted: #94969f;
+  --border: #eaeaec;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--secondary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar for horizontal rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
